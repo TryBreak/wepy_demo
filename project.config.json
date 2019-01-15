@@ -1,13 +1,15 @@
 {
-  "description": "这是小程序框架wepy的测试demo",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram",
-  "appid": "touristappid",
-  "projectname": "wepy_demo",
-  "miniprogramRoot": "./dist"
+	"description": "这是小程序框架wepy的测试demo",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx6aa37b570324303c",
+	"projectname": "wepy_demo",
+	"miniprogramRoot": "dist/",
+	"condition": {}
 }
