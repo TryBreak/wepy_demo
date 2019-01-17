@@ -16,7 +16,7 @@
       wx:key
       wx:for-index="idx"
       wx:for-item="itemName"
-    >{{idx}}: {{itemName.name}}
+    >{{idx}}: <button @tap="changeArr()">{{itemName.name}}</button>
       <view
         wx:for="{{itemName.list}}"
         wx:key
@@ -46,7 +46,7 @@
     </view>
     <button
       type="primary"
-      @tap="$_log"
+      @tap="$log"
     >
       点我触发全局混合事件
     </button>
@@ -56,6 +56,14 @@
     >
       点我更改数组
     </button>
+    <repeat
+      for="{{groupList}}"
+      key="index"
+      index="index"
+      item="item"
+    >
+      {{index}}: <button @tap="changeArr(index)">{{item.name}}</button>
+    </repeat>
   </view>
 </template>
 
@@ -72,6 +80,7 @@ export default class whileDo extends wepy.page {
     groupList: [
       {
         id: 1,
+        num: 0,
         name: '点击改变1',
         list: [
           {
@@ -100,6 +109,7 @@ export default class whileDo extends wepy.page {
       },
       {
         id: 2,
+        num: 0,
         name: '点击改变2',
         list: [
           {
@@ -118,6 +128,7 @@ export default class whileDo extends wepy.page {
       },
       {
         id: 3,
+        num: 0,
         name: '点击改变3',
         list: [
           {
@@ -130,11 +141,16 @@ export default class whileDo extends wepy.page {
   };
   computed = {};
   methods = {
-    $_log() {
-      console.log(this.$_roundNum(100, 200));
+    $log() {
+      console.log(this.$roundNum(100, 200));
     },
-    changeArr() {
-      console.log(this.groupList);
+    changeArr(index) {
+      console.log(index);
+      // if (index && index !== 0) {
+      //   this.$shuffle(this.groupList);
+      // } else {
+      //   console.log(index);
+      // }
     }
   };
   events = {};

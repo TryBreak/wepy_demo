@@ -107,10 +107,10 @@
         slot="title"
       >测试组件Repeat</view>
       <repeat
-        for
+        for="{{groupList}}"
+        key="index"
         index="index"
         item="item"
-        key="key"
       >
         <group
           :grouplist="item"
