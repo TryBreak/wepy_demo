@@ -2,7 +2,14 @@
 </style>
 <template>
   <view class="container">这里是一个页面
-    <navigator url="/pages/demo/index" hover-class="navigator-hover">跳转到 DemoIndex</navigator>
+    <navigator
+      url="../demo/index"
+      hover-class="navigator-hover"
+    >跳转到 demo/index 相对路径写法 , 不推荐</navigator>
+    <navigator
+      url="/pages/demo/style"
+      hover-class="navigator-hover"
+    >跳转到 demo/style 绝对路径写法,推荐</navigator>
   </view>
 </template>
 

@@ -20,7 +20,7 @@ const store = configStore();
 setStore(store);
 export default class extends wepy.app {
   config = {
-    pages: ['pages/home/index', 'pages/demo/index'],
+    pages: ['pages/home/index', 'pages/demo/index', 'pages/demo/style'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
