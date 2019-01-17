@@ -3,6 +3,7 @@
   "description": "这是小程序框架wepy的测试demo",
   "version": "0.0.2",
   "main": "dist/app.js",
+  "private": true,
   "scripts": {
     "dev": "wepy build --watch",
     "build": "cross-env NODE_ENV=production wepy build --no-cache",
