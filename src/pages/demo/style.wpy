@@ -1,4 +1,5 @@
 <style lang="less">
+@import '../../global.less';
 .wrapper {
   background-color: #929345;
   border: 1px solid #000;
@@ -12,6 +13,26 @@
       color: #fff;
     }
   }
+  .global-fun {
+    .mix();
+  }
+  .block-px {
+    width: 360px;
+    height: 100px;
+    background-color: red;
+    margin: 10px auto;
+    font-size: 14px;
+  }
+  .block-rpx {
+    width: 720rpx;
+    height: 200rpx;
+    background-color: red;
+    margin: 10rpx auto;
+    font-size: 28rpx;
+  }
+  .global-var {
+    height: @wrapperW;
+  }
 }
 </style>
 <template>
@@ -20,7 +41,12 @@
       相关的标签查看:
       <view class="url">https://developers.weixin.qq.com/miniprogram/dev/component/</view>
     </view>
-    <view class="color-red ">这里是app.wpy全局的样式引用</view>
+    <view class="color-red">这里是app.wpy全局的样式引用</view>
+    <view class="global-color-black">这里是 global.less 的全局类名调用</view>
+    <view class="global-fun">这里是 global.less 的全局方法调用</view>
+    <view class="global-var">这里是 global.less 的变量调用</view>
+    <view class="block-px">px 物理像素点尺寸,不推荐使用</view>
+    <view class="block-rpx">rpx 推荐使用 --- 使用方法: 设计稿尺寸(375基准)*2 相对像素基准点,可以和设计稿保持较高一致</view>
 
   </view>
 </template>
