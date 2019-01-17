@@ -36,14 +36,14 @@
         slot="title"
       >测试数据绑定</view>
 
-      <text class="info">{{normalTitle}}</text>
-      <text class="info">{{setTimeoutTitle}}</text>
-      <text class="info">{{mixin}}</text>
-      <text class="info">{{mynum}}</text>
-      <text class="info">{{now}}</text>
-      <text class="info">{{num}}</text>
-      <text class="info">{{asyncNum}}</text>
-      <text class="info">{{sumNum}}</text>
+      <text class="info">{{normalTitle}}</text>-11
+      <text class="info">{{setTimeoutTitle}}</text>-22
+      <text class="info">{{mixin}}</text>-33
+      <text class="info">{{mynum}}</text>-44
+      <text class="info">{{now}}</text>-55
+      <text class="info">{{num}}</text>-66
+      <text class="info">{{asyncNum}}</text>-77
+      <text class="info">{{sumNum}}</text>-88
       <button
         @tap="plus('a')"
         size="mini"
@@ -90,7 +90,7 @@
       >测试组件</view>
 
       <text class="testcounter">计数组件1:</text>
-      <view class="counterview">兄信息
+      <view class="counterview">
         <counter1 @index-emit="counterEmit" />
       </view>
 
