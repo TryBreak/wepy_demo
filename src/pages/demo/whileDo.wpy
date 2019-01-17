@@ -63,6 +63,7 @@
       item="item"
     >
       {{index}}: <button @tap="changeArr(index)">{{item.name}}</button>
+      这里是错误的做法
     </repeat>
   </view>
 </template>
@@ -146,11 +147,7 @@ export default class whileDo extends wepy.page {
     },
     changeArr(index) {
       console.log(index);
-      // if (index && index !== 0) {
-      //   this.$shuffle(this.groupList);
-      // } else {
-      //   console.log(index);
-      // }
+      this.$shuffle(this.groupList);
     }
   };
   events = {};
