@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import wepy from 'wepy'
+import wepy from 'wepy';
 export default class index extends wepy.page {
   config = {
     navigationBarTitleText: 'home'
