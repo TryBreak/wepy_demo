@@ -21,3 +21,8 @@ npm run dev
 
 具体信息参见官方文档:
 [wepy 官方文档](https://tencent.github.io/wepy/document.html)
+
+## 编辑器代码高亮配置规则
+
+[wepy 官方文档](https://tencent.github.io/wepy/document.html)
+左侧栏代码高亮部分
