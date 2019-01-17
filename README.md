@@ -54,3 +54,11 @@ npm run dev
 - 启用自定义处理命令 : false
 
 - 不校验合法域名、web-view（业务域名）、TLS 版本以及 HTTPS 证书 : true
+
+## 标准
+
+- 页面命名规则为小驼峰命名,
+- 页面命名必须与页面输出命名一致,
+- 所有标签必须闭合并带结尾 如 \<br />
+
+vscode 需增加设置项 "vetur.format.defaultFormatter.html": "js-beautify-html"
