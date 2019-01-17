@@ -4,12 +4,24 @@
   border: 1px solid #000;
   & > view {
     color: #000;
+    word-break: break-all;
+  }
+  .urlbox {
+    background-color: #000;
+    color: red;
+    .url {
+      color: #fff;
+    }
   }
 }
 </style>
 <template>
   <view class="wrapper">
-    <view>asdasdasd</view>
+    <view class="urlbox">
+      相关的标签查看:
+      <view class="url">https://developers.weixin.qq.com/miniprogram/dev/component/</view>
+    </view>
+
   </view>
 </template>
 
