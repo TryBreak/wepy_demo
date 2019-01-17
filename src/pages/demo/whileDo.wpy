@@ -1,22 +1,158 @@
 <style lang="less">
+.wrapper {
+  view {
+    padding: 10rpx;
+    border: 1px solid #000;
+    margin: 10rpx;
+    background-color: burlywood;
+  }
+}
 </style>
 <template>
   <view class="wrapper">
-    条件循环样例
+    列表渲染:
+    <view
+      wx:for="{{groupList}}"
+      wx:key
+      wx:for-index="idx"
+      wx:for-item="itemName"
+    >{{idx}}: {{itemName.name}}
+      <view
+        wx:for="{{itemName.list}}"
+        wx:key
+        wx:for-index="idx2"
+        wx:for-item="itemName2"
+      > {{idx2}} --- {{itemName2.childid}} --- {{itemName2.childname}}
+        <view
+          wx:for="{{itemName2.list}}"
+          wx:key
+          wx:for-index="idx3"
+          wx:for-item="itemName3"
+        >
+          {{idx3}} ---
+          name:{{itemName3.name}} ---
+          age:{{itemName3.age}} ---
+          add:{{itemName3.add}} ---
+          <view
+            wx:for="{{itemName3.list}}"
+            wx:key
+            wx:for-index="idx4"
+            wx:for-item="itemName4"
+          >
+            {{idx4}} ---{{itemName4}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <button
+      type="primary"
+      @tap="$_log"
+    >
+      点我触发全局混合事件
+    </button>
+    <button
+      type="warn"
+      @tap="changeArr"
+    >
+      点我更改数组
+    </button>
   </view>
 </template>
 
 <script>
 import wepy from 'wepy';
+import utils from '@/mixins/utils.js';
 export default class whileDo extends wepy.page {
   config = {
     navigationBarTitleText: 'demo-whileDo'
   };
+  mixins = [utils];
   components = {};
-  data = {};
+  data = {
+    groupList: [
+      {
+        id: 1,
+        name: '点击改变1',
+        list: [
+          {
+            childid: '1.1',
+            childname: '子项，点我改变',
+            list: [
+              { name: 111, age: 222, add: 'xxxx11x' },
+              { name: 222, age: 333, add: 'xxxx22x' },
+              {
+                name: 333,
+                age: 444,
+                add: 'xxx33xx',
+                list: ['a', 'b', 'c', 'd']
+              }
+            ]
+          },
+          {
+            childid: '1.2',
+            childname: '子项，点我改变'
+          },
+          {
+            childid: '1.3',
+            childname: '子项，点我改变'
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: '点击改变2',
+        list: [
+          {
+            childid: '2.1',
+            childname: '子项，点我改变'
+          },
+          {
+            childid: '2.2',
+            childname: '子项，点我改变'
+          },
+          {
+            childid: '2.3',
+            childname: '子项，点我改变'
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: '点击改变3',
+        list: [
+          {
+            childid: '3.1',
+            childname: '子项，点我改变'
+          }
+        ]
+      }
+    ]
+  };
   computed = {};
-  methods = {};
+  methods = {
+    $_log() {
+      console.log(this.$_roundNum(100, 200));
+    },
+    changeArr() {
+      console.log(this.groupList);
+    }
+  };
   events = {};
-  onLoad() {}
+  onShow() {
+    console.log('页面显示/切入前台时触发。');
+  }
+  onReady() {
+    console.log(
+      '页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。,比如ajax'
+    );
+  }
+  onHide() {
+    console.log(
+      '页面隐藏/切入后台时触发。 如 navigateTo 或底部 tab 切换到其他页面，小程序切入后台等。'
+    );
+  }
+  onUnload() {
+    console.log('页面卸载时触发。如redirectTo或navigateBack到其他页面时。');
+  }
 }
 </script>
