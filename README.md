@@ -1,15 +1,16 @@
 # 小程序应用框架 wepy 的测试和开发 demo
 
-## 使用方法:
+## 使用方法
 
 ```bash shell
+#安装 wepy-cli 工具
+npm install wepy-cli -g
 
 #安装依赖
 npm  install
 
-#开启实时编译
-wepy build --watch
-
+#开启实时编译并保持命令行运行
+npm run dev
 ```
 
 打开`微信开发者工具`-->`小程序`-->`新增`:
