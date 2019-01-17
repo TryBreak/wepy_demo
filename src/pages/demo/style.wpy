@@ -67,7 +67,7 @@
 import wepy from 'wepy';
 export default class demoIndex extends wepy.page {
   config = {
-    navigationBarTitleText: 'demo'
+    navigationBarTitleText: 'demo-style'
   };
   components = {};
   data = {};

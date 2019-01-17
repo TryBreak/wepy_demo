@@ -1,0 +1,22 @@
+<style lang="less">
+</style>
+<template>
+  <view class="wrapper">
+    条件循环样例
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy';
+export default class whileDo extends wepy.page {
+  config = {
+    navigationBarTitleText: 'demo-whileDo'
+  };
+  components = {};
+  data = {};
+  computed = {};
+  methods = {};
+  events = {};
+  onLoad() {}
+}
+</script>

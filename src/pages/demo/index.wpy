@@ -157,7 +157,7 @@ console.log('moduleA ignored: ', moduleA); // => moduleA ignored: {}
 })
 export default class demoIndex extends wepy.page {
   config = {
-    navigationBarTitleText: 'demo'
+    navigationBarTitleText: 'demo-index'
   };
   components = {
     panel: Panel,

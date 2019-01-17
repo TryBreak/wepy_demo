@@ -1,15 +1,32 @@
 <style lang="less">
 </style>
 <template>
-  <view class="wrapper">这里是一个页面,样式干涉测试
-    <navigator
-      url="../demo/index"
-      hover-class="navigator-hover"
-    >跳转到 demo/index 相对路径写法 , 不推荐</navigator>
-    <navigator
-      url="/pages/demo/style"
-      hover-class="navigator-hover"
-    >跳转到 demo/style 绝对路径写法,推荐</navigator>
+  <view class="wrapper">
+    <view class="wrapper">这里是一个页面, wrapper 样式干涉测试,</view>
+
+    跳转链接:
+
+    <view class="url">
+      <navigator
+        url="../demo/index"
+        hover-class="navigator-hover"
+      >跳转到 demo/index 相对路径写法 , 不推荐</navigator>
+    </view>
+
+    <view class="url">
+      <navigator
+        url="/pages/demo/style"
+        hover-class="navigator-hover"
+      >跳转到 demo/style 绝对路径写法,推荐</navigator>
+    </view>
+
+    <view class="url">
+      <navigator
+        url="pages/demo/whileDo"
+        hover-class="navigator-hover"
+      >跳转到 pages/demo/whileDo</navigator>
+    </view>
+
   </view>
 </template>
 
