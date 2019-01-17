@@ -1,16 +1,16 @@
 {
-	"description": "这是小程序框架 wepy 的测试demo",
-	"setting": {
-		"urlCheck": false,
-		"es6": false,
-		"postcss": false,
-		"minified": false,
-		"newFeature": true,
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"appid": "wx6aa37b570324303c",
-	"projectname": "wepy_demo",
-	"miniprogramRoot": "dist/",
-	"condition": {}
+  "description": "这是小程序框架 wepy 的测试demo",
+  "appid": "wx6aa37b570324303c",
+  "projectname": "wepy_demo",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "postcss": false,
+    "minified": false,
+    "newFeature": true,
+    "autoAudits": false
+  },
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/",
+  "condition": {}
 }
