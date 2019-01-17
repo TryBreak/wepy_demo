@@ -1,4 +1,4 @@
-# 小程序应用框架 wepy 的测试和开发 demo
+# 小程序应用框架 wepy 的测试和开发模板,内涵测试 demo
 
 ## 使用方法
 
@@ -13,16 +13,24 @@ npm  install
 npm run dev
 ```
 
-打开`微信开发者工具`-->`小程序`-->`新增`:
+打开`微信开发者工具`-->`小程序`-->`新增`
 
-> `项目目录先择本文件根目录即可`
+> 注: `项目目录先择本文件根目录即可`
 
 `project.config.json` 文件可修改 AppID 为自己的 ID,项目名称和描述
 
-具体信息参见官方文档:
+详细使用方法参见:
 [wepy 官方文档](https://tencent.github.io/wepy/document.html)
+`创建与使用`部分
 
 ## 编辑器代码高亮配置规则
 
+参见
 [wepy 官方文档](https://tencent.github.io/wepy/document.html)
-左侧栏代码高亮部分
+`代码高亮`部分
+
+## 注意事项
+
+参见
+[wepy 官方文档](https://tencent.github.io/wepy/document.html)
+`代码规范` 5,6 部分
