@@ -34,3 +34,5 @@ npm run dev
 参见
 [wepy 官方文档](https://tencent.github.io/wepy/document.html)
 `代码规范` 5,6 部分
+
+## 如果遇到编译不成功修改无反应引入组件没效果等情况,请关掉`实时编译`重新启动命令
