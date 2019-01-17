@@ -1,7 +1,7 @@
 <style lang="less">
 </style>
 <template>
-  <view class="container">这里是一个页面
+  <view class="wrapper">这里是一个页面,样式干涉测试
     <navigator
       url="../demo/index"
       hover-class="navigator-hover"

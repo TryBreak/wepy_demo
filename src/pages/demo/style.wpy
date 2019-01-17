@@ -1,9 +1,8 @@
 <style lang="less">
 .wrapper {
-  background-color: red;
+  background-color: #929345;
   border: 1px solid #000;
   & > view {
-    color: #000;
     word-break: break-all;
   }
   .urlbox {
@@ -21,6 +20,7 @@
       相关的标签查看:
       <view class="url">https://developers.weixin.qq.com/miniprogram/dev/component/</view>
     </view>
+    <view class="color-red ">这里是app.wpy全局的样式引用</view>
 
   </view>
 </template>
