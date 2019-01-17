@@ -33,6 +33,12 @@
   .global-var {
     height: @wrapperW;
   }
+  .block-bg {
+    width: 100%;
+    height: 200rpx;
+    color: #fff;
+    background-image: url('https://markimg.github.io/lifeimg/1365762990323.jpg');
+  }
 }
 </style>
 <template>
@@ -47,6 +53,12 @@
     <view class="global-var">这里是 global.less 的变量调用</view>
     <view class="block-px">px 物理像素点尺寸,不推荐使用</view>
     <view class="block-rpx">rpx 推荐使用 --- 使用方法: 设计稿尺寸(375基准)*2 相对像素基准点,可以和设计稿保持较高一致</view>
+    <view class="block-bg">背景图xxxx</view>
+    image 标签
+    <image
+      style="width: 200px; height: 200px;"
+      src="https://markimg.github.io/lifeimg/1365762990323.jpg"
+    ></image>
 
   </view>
 </template>
