@@ -69,5 +69,8 @@ export default class extends wepy.app {
       }
     });
   }
+  logABC(param) {
+    console.log(param);
+  }
 }
 </script>

@@ -1,8 +1,16 @@
 <style lang="less">
+.url {
+  color: blue;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
 </style>
 <template>
   <view class="wrapper">
-    <view class="wrapper">这里是一个页面, wrapper 样式干涉测试,</view>
+    <view
+      class="wrapper"
+      @tap="globalFun('abcdefg')"
+    >这里是一个页面, wrapper 样式干涉测试,点击我调用全局方法</view>
 
     跳转链接:
 
@@ -21,10 +29,10 @@
     </view>
 
     <view class="url">
-      <navigator
-        url="pages/demo/whileDo"
+      <text
         hover-class="navigator-hover"
-      >跳转到 pages/demo/whileDo</navigator>
+        @tap="linkClick('/pages/demo/whileDo')"
+      >跳转到 pages/demo/whileDo 编程式导航</text>
     </view>
 
   </view>
@@ -39,7 +47,21 @@ export default class index extends wepy.page {
   components = {};
   data = {};
   computed = {};
-  methods = {};
+  // 自定义方法必须放在外层
+  linkTo = url => {
+    wx.navigateTo({
+      url
+    });
+  };
+  methods = {
+    // 只可放置事件方法
+    linkClick(url) {
+      this.linkTo(url); // 自定义方法
+    },
+    globalFun(param) {
+      this.$parent.logABC(param);
+    }
+  };
   events = {};
   onLoad() {}
 }
