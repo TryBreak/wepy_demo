@@ -106,7 +106,7 @@ console.log('moduleA ignored: ', moduleA) // => moduleA ignored: {}
     return state.counter.num + state.counter.asyncNum
   }
 })
-export default class Demoindex extends wepy.page {
+export default class demoIndex extends wepy.page {
   config = {
     navigationBarTitleText: 'demo'
   };

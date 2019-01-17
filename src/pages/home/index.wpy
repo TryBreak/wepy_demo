@@ -2,16 +2,15 @@
 </style>
 <template>
   <view class="container">这里是一个页面
-    <navigator url="/pages/index2" hover-class="navigator-hover">跳转到新页面</navigator>
     <navigator url="/pages/demo/index" hover-class="navigator-hover">跳转到 DemoIndex</navigator>
   </view>
 </template>
 
 <script>
 import wepy from 'wepy'
-export default class Index extends wepy.page {
+export default class index extends wepy.page {
   config = {
-    navigationBarTitleText: 'test'
+    navigationBarTitleText: 'home'
   };
   components = {};
   data = {};
